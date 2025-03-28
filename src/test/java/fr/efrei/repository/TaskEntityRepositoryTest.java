@@ -21,7 +21,7 @@ class TaskEntityRepositoryTest {
     }
 
     @Test
-    void b_read() {
+     void b_read() {
         TaskEntity read = repository.read(task.getTaskName());
         assertNotNull(read);
         System.out.println(read.toString());

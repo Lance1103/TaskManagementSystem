@@ -7,5 +7,7 @@ import java.util.List;
 
 public interface ITaskEntityRepository extends IRepository<TaskEntity, String>{
 
+
+
       List<TaskEntity> getAll();
 }
