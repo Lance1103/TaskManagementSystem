@@ -1,10 +1,14 @@
+/*TaskEntity.java
+* TaskEntity model class
+* Author: Lance Franks (230803865)*/
+
 package fr.efrei.domain;
 
 public class TaskEntity {
     private String taskName;
     private String taskDescription;
     private String dueDate;
-    private Boolean taskStatus;
+    private String taskStatus;
 
     private TaskEntity() {}
 
@@ -30,7 +34,7 @@ public class TaskEntity {
         return dueDate;
     }
 
-    public Boolean getTaskStatus() {
+    public String getTaskStatus() {
         return taskStatus;
     }
 
@@ -48,7 +52,7 @@ public class TaskEntity {
         private String taskName;
         private String taskDescription;
         private String dueDate;
-        private Boolean taskStatus;
+        private String taskStatus;
 
         public Builder setTaskName(String taskName) {
             this.taskName = taskName;
@@ -65,11 +69,20 @@ public class TaskEntity {
             return this;
         }
 
-        public Builder setTaskStatus(Boolean taskStatus) {
+        public Builder setTaskStatus(String taskStatus) {
             this.taskStatus = taskStatus;
             return this;
         }
 
+
+
         public TaskEntity build() { return new TaskEntity(this); }
+
+        public Builder copy(TaskEntity task) {
+            return null;
+        }
+
     }
 }
+
+
