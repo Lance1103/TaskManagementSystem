@@ -74,11 +74,14 @@ public class TaskEntity {
             return this;
         }
 
+
+
         public TaskEntity build() { return new TaskEntity(this); }
 
         public Builder copy(TaskEntity task) {
             return null;
         }
+
     }
 }
 
