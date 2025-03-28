@@ -1,7 +1,9 @@
-//216269369 - Milani Ncana
 package fr.efrei.repository;
 
-public interface IRepository<T,ID> {
+import fr.efrei.domain.TaskEntity;
+
+public interface IRepository<T, ID> {
+
 
     T create(T t);
 
