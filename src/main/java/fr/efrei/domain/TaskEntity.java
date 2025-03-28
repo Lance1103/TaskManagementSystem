@@ -1,3 +1,7 @@
+/*TaskEntity.java
+* TaskEntity model class
+* Author: Lance Franks (230803865)*/
+
 package fr.efrei.domain;
 
 public class TaskEntity {
