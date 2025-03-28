@@ -1,9 +1,7 @@
+//230136982 - Faranani Khangale
 package fr.efrei.repository;
 
-import fr.efrei.domain.TaskEntity;
-
-public interface IRepository<T, ID> {
-
+public interface IRepository<T,ID> {
 
     T create(T t);
 
