@@ -1,3 +1,4 @@
+//230136982 - Faranani Khangale
 package fr.efrei.domain;
 
 import java.time.LocalDate;
@@ -13,6 +14,7 @@ public class Project {
     private String status;
     private List<TaskEntity> tasks;
 
+    // Private constructor to enforce Builder pattern
     private Project() {}
 
     private Project(Builder builder) {
@@ -22,12 +24,10 @@ public class Project {
         this.startDate = builder.startDate;
         this.endDate = builder.endDate;
         this.status = builder.status;
-        this.tasks = builder.tasks;
-        if(this.tasks == null)
-        {this.tasks = new ArrayList<>();
-        }
+        this.tasks = (builder.tasks != null) ? builder.tasks : new ArrayList<>();
     }
 
+    // Getters
     public String getProjectId() {
         return projectId;
     }
@@ -56,6 +56,14 @@ public class Project {
         return tasks;
     }
 
+    // Method to add a task to the project
+    public void addTask(TaskEntity task) {
+        if (task != null) {
+            this.tasks.add(task);
+        }
+    }
+
+    // toString() method for easy printing
     @Override
     public String toString() {
         return "Project{" +
@@ -68,6 +76,7 @@ public class Project {
                 ", tasks=" + tasks +
                 '}';
     }
+
 
     public static class Builder {
         private String projectId;
@@ -117,5 +126,16 @@ public class Project {
             return new Project(this);
         }
     }
-}
+ /*   public static void main(String[] args) {
+        Project project = new Builder()
+                .setProjectId("ADP1")
+                .setName("CAPSTONE")
+                .setDescription("Building a capstone project")
+                .setStartDate(LocalDate.now())
+                .setEndDate(LocalDate.now())
+                .setStatus("building")
+                .setTasks(new ArrayList<>()) // Initialize tasks list to avoid null issues
+               .build();
+   }*/
 
+}
