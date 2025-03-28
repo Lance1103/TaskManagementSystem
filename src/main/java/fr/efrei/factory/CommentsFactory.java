@@ -1,10 +1,10 @@
 package fr.efrei.factory;
 
-import fr.efrei.domain.CommentsEntity;
+import fr.efrei.domain.Comments;
 
 public class CommentsFactory {
 
-    public static CommentsEntity createCommentsEntity(String userID, String userName, String userComments, int ratings) {
+    public static Comments createCommentsEntity(String userID, String userName, String userComments, int ratings) {
 
         if (userID == null || userID.isEmpty()){
             return null;
@@ -19,7 +19,7 @@ public class CommentsFactory {
             return null;
         }
 
-        return new CommentsEntity.Builder().setUserID(userID)
+        return new Comments.Builder().setUserID(userID)
                 .setUserName(userName).setUserComments(userComments)
                 .setRatings(ratings).build();
     }

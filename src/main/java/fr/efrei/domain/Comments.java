@@ -1,17 +1,18 @@
+//216269369 - Milani Ncana
 package fr.efrei.domain;
 
-public class CommentsEntity {
+public class Comments {
 
     private String userID;
     private String userName;
     private String userComments;
     private int ratings;
 
-    public CommentsEntity(){
+    public Comments(){
 
     }
 
-    public CommentsEntity(Builder builder) {
+    public Comments(Builder builder) {
         this.userID = builder.userID;
         this.userName = builder.userName;
         this.userComments = builder.userComments;
@@ -35,7 +36,7 @@ public class CommentsEntity {
 
     @Override
     public String toString() {
-        return "CommentsEntity{" + "useID=" + userID +
+        return "Comments{" + "userID=" + userID +
                 "userName='" + userName + '\'' +
                 ", userComments='" + userComments + '\'' +
                 ", ratings=" + ratings +
@@ -69,8 +70,8 @@ public class CommentsEntity {
             return this;
         }
 
-        public CommentsEntity build() {
-            return new CommentsEntity(this);
+        public Comments build() {
+            return new Comments(this);
         }
     }
 }
