@@ -71,5 +71,9 @@ public class TaskEntity {
         }
 
         public TaskEntity build() { return new TaskEntity(this); }
+
+        public Builder copy(TaskEntity task) {
+            return null;
+        }
     }
 }
