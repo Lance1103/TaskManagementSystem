@@ -20,6 +20,7 @@ public class CommentsFactory {
         }
 
         return new CommentsEntity.Builder().setUserID(userID)
-                .setUserName(userName).setUserComments(userComments).setRatings(ratings).build();
+                .setUserName(userName).setUserComments(userComments)
+                .setRatings(ratings).build();
     }
 }

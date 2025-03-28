@@ -35,7 +35,7 @@ public class CommentsEntity {
 
     @Override
     public String toString() {
-        return "CommentsEntity{" + "userID=" + userID +
+        return "CommentsEntity{" + "useID=" + userID +
                 "userName='" + userName + '\'' +
                 ", userComments='" + userComments + '\'' +
                 ", ratings=" + ratings +
