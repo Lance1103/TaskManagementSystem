@@ -4,7 +4,7 @@ public class TaskEntity {
     private String taskName;
     private String taskDescription;
     private String dueDate;
-    private Boolean taskStatus;
+    private String taskStatus;
 
     private TaskEntity() {}
 
@@ -30,7 +30,7 @@ public class TaskEntity {
         return dueDate;
     }
 
-    public Boolean getTaskStatus() {
+    public String getTaskStatus() {
         return taskStatus;
     }
 
@@ -48,7 +48,7 @@ public class TaskEntity {
         private String taskName;
         private String taskDescription;
         private String dueDate;
-        private Boolean taskStatus;
+        private String taskStatus;
 
         public Builder setTaskName(String taskName) {
             this.taskName = taskName;
@@ -65,7 +65,7 @@ public class TaskEntity {
             return this;
         }
 
-        public Builder setTaskStatus(Boolean taskStatus) {
+        public Builder setTaskStatus(String taskStatus) {
             this.taskStatus = taskStatus;
             return this;
         }
