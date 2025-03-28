@@ -1,3 +1,8 @@
+/* Helper.java
+Helper class
+Author: Inam Jim (222086939)
+Date: 28 March 2025
+*/
 package fr.efrei.util;
 
 import org.apache.commons.validator.EmailValidator;

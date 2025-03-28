@@ -1,3 +1,8 @@
+/* UserEntity.java
+UserEntity class
+Author: Inam Jim (222086939)
+Date: 28 March 2025
+*/
 package fr.efrei.domain;
 
 public class UserEntity {
@@ -70,5 +75,10 @@ public class UserEntity {
         }
 
         public UserEntity build(){ return new UserEntity(this);}
+
+        public Builder copy(UserEntity user) {
+
+            return null;
+        }
     }
 }
